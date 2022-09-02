@@ -15,7 +15,7 @@ export default function News(props) {
 
     async function getData(){
         setloading(true)
-        let url=`https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=75b9f1ede05040bfbd5aaf95bab1cb62`
+        let url=`http://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=75b9f1ede05040bfbd5aaf95bab1cb62`
         let data =await fetch(url);
         let res=await data.json();
         console.log(res)
@@ -26,7 +26,7 @@ export default function News(props) {
 
     const fetchMoreData = async () => {   
        
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=75b9f1ede05040bfbd5aaf95bab1cb62&page=${page+1}`;
+        const url = `http://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=75b9f1ede05040bfbd5aaf95bab1cb62&page=${page+1}`;
         setpage(page+1)
         let data = await fetch(url);
         let parsedData = await data.json()
