@@ -1,6 +1,7 @@
 import React from 'react'
 
 const NewsItem = (props) =>{
+  
         let { tittle,url,hr,cast} = props;
         return (
             <div className="card my-3 mx-3"  >
